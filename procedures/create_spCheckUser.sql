@@ -6,13 +6,11 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE OR ALTER PROCEDURE dbo.spCheckUser
-    @UserName VARCHAR(100)
-   ,@PasswordHash BINARY(32)
+   @UserName VARCHAR(100),
+   @PasswordHash CHAR(44)
 AS
 BEGIN
-   SET NOCOUNT ON;
-
-   SELECT UserId FROM [User] WHERE UserName = @UserName AND PasswordHash = PasswordHash;
+   SELECT UserId FROM [User] WHERE UserName = @UserName AND PasswordHash = @PasswordHash;
 END
 GO
 

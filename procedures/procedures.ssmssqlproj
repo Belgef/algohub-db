@@ -18,7 +18,38 @@
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
-      <Items />
+      <Items>
+        <FileNode Name="create_spAddUser.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spAddUser.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spCheckRefreshToken.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spCheckRefreshToken.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spCheckUser.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spCheckUser.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spGetUserSalt.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spGetUserSalt.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spRefreshToken.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spRefreshToken.sql</FullPath>
+        </FileNode>
+      </Items>
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
       <Items />
