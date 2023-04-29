@@ -1,0 +1,36 @@
+USE AlgoHub
+GO
+
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS(SELECT * FROM sys.views WHERE name = 'User' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP VIEW dbo.[User]
+GO
+
+IF EXISTS(SELECT * FROM sys.tables WHERE name = 'tblUser' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP TABLE dbo.tblUser
+GO
+
+CREATE TABLE dbo.tblUser
+(
+   UserId BIGINT NOT NULL
+      CONSTRAINT PK_User PRIMARY KEY CLUSTERED,
+   UserName NVARCHAR(100) NOT NULL
+      CONSTRAINT UNQ_User_UserName UNIQUE,
+   FullName NVARCHAR(200),
+   Email NVARCHAR(100) NOT NULL
+      CONSTRAINT UNQ_User_Email UNIQUE,
+   PasswordHash CHAR(16) NOT NULL,
+   IconName NVARCHAR(100),
+   CreateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_User_CreateDate DEFAULT SYSUTCDATETIME(),
+   UpdateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_User_UpdateDate DEFAULT SYSUTCDATETIME()
+)
+GO
+
+CREATE VIEW dbo.[User] AS SELECT * FROM dbo.tblUser
+GO
