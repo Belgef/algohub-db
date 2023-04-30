@@ -14,6 +14,8 @@ CREATE OR ALTER PROCEDURE dbo.spAddUser
    @IconName VARCHAR(100) = NULL
 AS
 BEGIN
+   SET NOCOUNT ON
+
    INSERT INTO [User] (UserName, FullName, Email, PasswordHash, PasswordSalt, IconName)
    VALUES (@UserName, @FullName, @Email, @PasswordHash, @PasswordSalt, @IconName);
 END

@@ -1,0 +1,31 @@
+USE AlgoHub
+GO
+
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS(SELECT * FROM sys.views WHERE name = 'Role' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP VIEW dbo.[Role]
+GO
+
+IF EXISTS(SELECT * FROM sys.tables WHERE name = 'tblRole' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP TABLE dbo.tblRole
+GO
+
+CREATE TABLE dbo.tblRole
+(
+   RoleId INT NOT NULL IDENTITY(1,1)
+      CONSTRAINT PK_Role PRIMARY KEY CLUSTERED,
+   RoleName VARCHAR(100) NOT NULL
+      CONSTRAINT UNQ_Role_RoleName UNIQUE,
+   CreateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_Role_CreateDate DEFAULT SYSUTCDATETIME(),
+   UpdateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_Role_UpdateDate DEFAULT SYSUTCDATETIME()
+)
+GO
+
+CREATE VIEW dbo.[Role] AS SELECT * FROM dbo.tblRole
+GO

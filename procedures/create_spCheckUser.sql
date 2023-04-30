@@ -10,6 +10,8 @@ CREATE OR ALTER PROCEDURE dbo.spCheckUser
    @PasswordHash CHAR(44)
 AS
 BEGIN
+   SET NOCOUNT ON
+
    SELECT UserId FROM [User] WHERE UserName = @UserName AND PasswordHash = @PasswordHash;
 END
 GO
