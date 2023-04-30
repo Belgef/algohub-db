@@ -18,6 +18,8 @@ BEGIN
 
    INSERT INTO [User] (UserName, FullName, Email, PasswordHash, PasswordSalt, IconName)
    VALUES (@UserName, @FullName, @Email, @PasswordHash, @PasswordSalt, @IconName);
+
+   SELECT UserId, UserName, FullName, Email, IconName FROM [User] WHERE UserName = @UserName;
 END
 GO
 
