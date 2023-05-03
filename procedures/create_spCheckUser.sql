@@ -1,6 +1,3 @@
-USE AlgoHub
-GO
-
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
@@ -15,7 +12,3 @@ BEGIN
    SELECT UserId FROM [User] WHERE UserName = @UserName AND PasswordHash = @PasswordHash;
 END
 GO
-
-/** ROLLBACK **
-DROP PROCEDURE dbo.spCheckUser
-*/

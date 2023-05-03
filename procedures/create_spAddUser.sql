@@ -1,6 +1,3 @@
-USE AlgoHub
-GO
-
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
@@ -22,7 +19,3 @@ BEGIN
    SELECT UserId, UserName, FullName, Email, IconName FROM [User] WHERE UserName = @UserName;
 END
 GO
-
-/** ROLLBACK **
-DROP PROCEDURE dbo.spAddUser
-*/

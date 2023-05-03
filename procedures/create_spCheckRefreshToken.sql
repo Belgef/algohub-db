@@ -1,6 +1,3 @@
-USE AlgoHub
-GO
-
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
@@ -18,7 +15,3 @@ BEGIN
       AND DATEDIFF(MINUTE, RefreshTokenExpireDate, SYSUTCDATETIME()) < 5;
 END
 GO
-
-/** ROLLBACK **
-DROP PROCEDURE dbo.spCheckRefreshToken
-*/

@@ -1,6 +1,3 @@
-USE AlgoHub
-GO
-
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
@@ -19,7 +16,3 @@ BEGIN
    WHERE UserId = @UserId;
 END
 GO
-
-/** ROLLBACK **
-DROP PROCEDURE dbo.spRefreshToken
-*/
