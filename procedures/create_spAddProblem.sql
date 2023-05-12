@@ -4,7 +4,7 @@ GO
 
 CREATE OR ALTER PROCEDURE dbo.spAddProblem
    @ProblemName NVARCHAR(100),
-   @ProblemContentFileName NVARCHAR(100),
+   @ProblemContent NVARCHAR(MAX),
    @AuthorId UNIQUEIDENTIFIER,
    @ImageName NVARCHAR(100) = NULL,
    @TimeLimitMs INT,
@@ -13,8 +13,8 @@ AS
 BEGIN
    SET NOCOUNT ON
 
-   INSERT INTO Problem (ProblemName, ProblemContentFileName, AuthorId, ImageName, TimeLimitMs, MemoryLimitBytes)
-   VALUES (@ProblemName, @ProblemContentFileName, @AuthorId, @ImageName, @TimeLimitMs, @MemoryLimitBytes);
+   INSERT INTO Problem (ProblemName, ProblemContent, AuthorId, ImageName, TimeLimitMs, MemoryLimitBytes)
+   VALUES (@ProblemName, @ProblemContent, @AuthorId, @ImageName, @TimeLimitMs, @MemoryLimitBytes);
 
    SELECT SCOPE_IDENTITY();
 END

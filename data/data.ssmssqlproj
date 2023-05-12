@@ -19,23 +19,23 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="01_insert_User.sql">
+        <FileNode Name="01_insert_Role.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>01_insert_User.sql</FullPath>
+          <FullPath>01_insert_Role.sql</FullPath>
         </FileNode>
-        <FileNode Name="02_insert_Role.sql">
+        <FileNode Name="02_insert_User.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>02_insert_Role.sql</FullPath>
+          <FullPath>02_insert_User.sql</FullPath>
         </FileNode>
-        <FileNode Name="03_insert_UserRole.sql">
+        <FileNode Name="03_insert_Problem.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>03_insert_UserRole.sql</FullPath>
+          <FullPath>03_insert_Problem.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

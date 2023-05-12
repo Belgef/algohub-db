@@ -1,0 +1,32 @@
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS(SELECT * FROM sys.views WHERE name = 'SolveVote' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP VIEW dbo.SolveVote
+GO
+
+IF EXISTS(SELECT * FROM sys.tables WHERE name = 'tblSolveVote' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP TABLE dbo.tblSolveVote
+GO
+
+CREATE TABLE dbo.tblSolveVote
+(
+   SolveVoteId INT NOT NULL IDENTITY(1, 1)
+      CONSTRAINT PK_SolveVote PRIMARY KEY CLUSTERED,
+   SolveId INT NOT NULL
+      CONSTRAINT FK_SolveVote_SolveId FOREIGN KEY REFERENCES tblSolve(SolveId) ON DELETE CASCADE,
+   AuthorId UNIQUEIDENTIFIER
+      CONSTRAINT FK_SolveVote_AuthorId FOREIGN KEY REFERENCES tblUser(UserId) ON DELETE SET NULL,
+   IsUpvote BIT NOT NULL
+      CONSTRAINT DFT_SolveVote_IsUpvote DEFAULT 1,
+   CreateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_SolveVote_CreateDate DEFAULT SYSUTCDATETIME(),
+   UpdateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_SolveVote_UpdateDate DEFAULT SYSUTCDATETIME()
+)
+GO
+
+CREATE VIEW dbo.SolveVote AS SELECT * FROM dbo.tblSolveVote
+GO

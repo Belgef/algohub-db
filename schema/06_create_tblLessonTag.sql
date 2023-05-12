@@ -1,0 +1,26 @@
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS(SELECT * FROM sys.views WHERE name = 'LessonTag' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP VIEW dbo.LessonTag
+GO
+
+IF EXISTS(SELECT * FROM sys.tables WHERE name = 'tblLessonTag' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP TABLE dbo.tblLessonTag
+GO
+
+CREATE TABLE dbo.tblLessonTag
+(
+   LessonTagId INT NOT NULL IDENTITY(1, 1)
+      CONSTRAINT PK_LessonTag PRIMARY KEY CLUSTERED,
+   LessonId INT NOT NULL
+      CONSTRAINT FK_LessonTag_LessonId FOREIGN KEY REFERENCES tblLesson(LessonId) ON DELETE CASCADE,
+   TagId INT NOT NULL
+      CONSTRAINT FK_LessonTag_TagId FOREIGN KEY REFERENCES tblTag(TagId) ON DELETE CASCADE,
+)
+GO
+
+CREATE VIEW dbo.LessonTag AS SELECT * FROM dbo.tblLessonTag
+GO

@@ -1,0 +1,37 @@
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS(SELECT * FROM sys.views WHERE name = 'Lesson' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP VIEW dbo.Lesson
+GO
+
+IF EXISTS(SELECT * FROM sys.tables WHERE name = 'tblLesson' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP TABLE dbo.tblLesson
+GO
+
+CREATE TABLE dbo.tblLesson
+(
+   LessonId INT NOT NULL IDENTITY(1, 1)
+      CONSTRAINT PK_Lesson PRIMARY KEY CLUSTERED,
+   Title NVARCHAR(200) NOT NULL,
+   LessonContent NVARCHAR(MAX) NOT NULL,
+   AuthorId UNIQUEIDENTIFIER
+      CONSTRAINT FK_Lesson_AuthorId FOREIGN KEY REFERENCES tblUser(UserId) ON DELETE SET NULL,
+   ImageName NVARCHAR(100),
+   [Views] INT NOT NULL
+      CONSTRAINT DFT_Lesson_Views DEFAULT 0,
+   Upvotes INT NOT NULL
+      CONSTRAINT DFT_Lesson_Upvotes DEFAULT 0,
+   Downvotes INT NOT NULL
+      CONSTRAINT DFT_Lesson_Downvotes DEFAULT 0,
+   CreateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_Lesson_CreateDate DEFAULT SYSUTCDATETIME(),
+   UpdateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_Lesson_UpdateDate DEFAULT SYSUTCDATETIME()
+)
+GO
+
+CREATE VIEW dbo.Lesson AS SELECT * FROM dbo.tblLesson
+GO

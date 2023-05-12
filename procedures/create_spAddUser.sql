@@ -8,14 +8,15 @@ CREATE OR ALTER PROCEDURE dbo.spAddUser
    @Email VARCHAR(254),
    @PasswordHash CHAR(44),
    @PasswordSalt CHAR(44),
-   @IconName VARCHAR(100) = NULL
+   @IconName VARCHAR(100) = NULL,
+   @RoleId INT = NULL
 AS
 BEGIN
    SET NOCOUNT ON
 
-   INSERT INTO [User] (UserName, FullName, Email, PasswordHash, PasswordSalt, IconName)
-   VALUES (@UserName, @FullName, @Email, @PasswordHash, @PasswordSalt, @IconName);
+   INSERT INTO [User] (UserName, FullName, Email, PasswordHash, PasswordSalt, IconName, RoleId)
+   VALUES (@UserName, @FullName, @Email, @PasswordHash, @PasswordSalt, @IconName, ISNULL(@RoleId, 1));
 
-   SELECT UserId, UserName, FullName, Email, IconName FROM [User] WHERE UserName = @UserName;
+   SELECT UserId FROM [User] WHERE UserName = @UserName;
 END
 GO

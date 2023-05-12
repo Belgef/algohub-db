@@ -1,0 +1,41 @@
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS(SELECT * FROM sys.views WHERE name = 'Solve' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP VIEW dbo.Solve
+GO
+
+IF EXISTS(SELECT * FROM sys.tables WHERE name = 'tblSolve' AND SCHEMA_NAME(schema_id) = 'dbo')
+   DROP TABLE dbo.tblSolve
+GO
+
+CREATE TABLE dbo.tblSolve
+(
+   SolveId INT NOT NULL IDENTITY(1, 1)
+      CONSTRAINT PK_Solve PRIMARY KEY CLUSTERED,
+   ProblemId INT NOT NULL
+      CONSTRAINT FK_Solve_ProblemId FOREIGN KEY REFERENCES tblProblem(ProblemId) ON DELETE CASCADE,
+   AuthorId UNIQUEIDENTIFIER
+      CONSTRAINT FK_Solve_AuthorId FOREIGN KEY REFERENCES tblUser(UserId) ON DELETE SET NULL,
+   LanguageId INT NOT NULL
+      CONSTRAINT FK_Solve_LanguageId FOREIGN KEY REFERENCES tblLanguage(LanguageId) ON DELETE CASCADE,
+   Code NVARCHAR(MAX) NOT NULL,
+   [Views] INT NOT NULL
+      CONSTRAINT DFT_Solve_Views DEFAULT 0,
+   Upvotes INT NOT NULL
+      CONSTRAINT DFT_Solve_Upvotes DEFAULT 0,
+   Downvotes INT NOT NULL
+      CONSTRAINT DFT_Solve_Downvotes DEFAULT 0,
+   TimeMs INT NOT NULL,
+   MemoryBytes INT NOT NULL,
+   CreateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_Solve_CreateDate DEFAULT SYSUTCDATETIME(),
+   UpdateDate DATETIME2(2) NOT NULL
+      CONSTRAINT DFT_Solve_UpdateDate DEFAULT SYSUTCDATETIME()
+)
+GO
+
+CREATE VIEW dbo.Solve AS SELECT * FROM dbo.tblSolve
+GO

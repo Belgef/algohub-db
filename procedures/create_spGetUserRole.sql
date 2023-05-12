@@ -8,8 +8,8 @@ AS
 BEGIN
    SET NOCOUNT ON
 
-   SELECT r.RoleId, RoleName FROM [Role] r
-   INNER JOIN UserRole ur ON r.RoleId = ur.RoleId
+   SELECT r.RoleId, RoleName FROM [User] u
+   LEFT JOIN [Role] r ON r.RoleId = u.RoleId
    WHERE UserId = @UserId;
 END
 GO

@@ -9,4 +9,4 @@ GO
 DBCC CHECKIDENT ('[tblRole]', RESEED, 0);
 GO
 
-INSERT INTO [Role] (RoleName) VALUES ('Administrator')
+INSERT INTO [Role] (RoleName) VALUES ('User'), ('Administrator')

@@ -11,9 +11,6 @@ BEGIN
    SELECT ProblemId, 
       ProblemName, 
 	  ProblemContentFileName, 
-	  FullName AuthorName, 
-	  UserName AuthorUserName, 
-      IconName AuthorIconName, 
 	  ImageName, 
 	  [Views], 
 	  Solves, 
@@ -21,9 +18,12 @@ BEGIN
 	  Downvotes, 
 	  TimeLimitMs, 
 	  MemoryLimitBytes, 
-	  p.CreateDate 
+	  p.CreateDate,
+	  u.UserName, 
+	  u.FullName, 
+      u.IconName
    FROM Problem p
-   JOIN [User] u
+   LEFT JOIN [User] u
    ON AuthorId = UserId
    WHERE ProblemId = @ProblemId;
 END

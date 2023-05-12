@@ -43,12 +43,6 @@
           <AssociatedConnUserName />
           <FullPath>create_spCheckRefreshToken.sql</FullPath>
         </FileNode>
-        <FileNode Name="create_spCheckUser.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>create_spCheckUser.sql</FullPath>
-        </FileNode>
         <FileNode Name="create_spCheckUserName.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
@@ -60,6 +54,12 @@
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>create_spGetProblemById.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spGetProblems.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spGetProblems.sql</FullPath>
         </FileNode>
         <FileNode Name="create_spGetUserById.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
@@ -73,11 +73,11 @@
           <AssociatedConnUserName />
           <FullPath>create_spGetUserRole.sql</FullPath>
         </FileNode>
-        <FileNode Name="create_spGetUserSalt.sql">
+        <FileNode Name="create_spLoginUser.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>create_spGetUserSalt.sql</FullPath>
+          <FullPath>create_spLoginUser.sql</FullPath>
         </FileNode>
         <FileNode Name="create_spRefreshToken.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>

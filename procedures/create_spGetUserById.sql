@@ -8,6 +8,10 @@ AS
 BEGIN
    SET NOCOUNT ON
 
-   SELECT UserId, UserName, FullName, Email, IconName FROM [User] WHERE UserId = @UserId;
+   SELECT UserId, UserName, FullName, Email, IconName, u.CreateDate, r.RoleId, r.RoleName 
+   FROM [User] u
+   LEFT JOIN [Role] r
+   ON u.RoleId = r.RoleId
+   WHERE UserId = @UserId;
 END
 GO

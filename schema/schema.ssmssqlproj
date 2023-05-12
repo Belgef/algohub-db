@@ -19,29 +19,95 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="01_create_tblUser.sql">
+        <FileNode Name="01_create_tblRole.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>01_create_tblUser.sql</FullPath>
+          <FullPath>01_create_tblRole.sql</FullPath>
         </FileNode>
-        <FileNode Name="02_create_tblRole.sql">
+        <FileNode Name="02_create_tblUser.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>02_create_tblRole.sql</FullPath>
+          <FullPath>02_create_tblUser.sql</FullPath>
         </FileNode>
-        <FileNode Name="03_create_tblUserRole.sql">
+        <FileNode Name="03_create_tblProblem.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>03_create_tblUserRole.sql</FullPath>
+          <FullPath>03_create_tblProblem.sql</FullPath>
         </FileNode>
-        <FileNode Name="04_create_tblProblem.sql">
+        <FileNode Name="04_create_tblLesson.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>04_create_tblProblem.sql</FullPath>
+          <FullPath>04_create_tblLesson.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05_create_tblTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05_create_tblTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06_create_tblLessonTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>06_create_tblLessonTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07_create_tblProblemComment.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>07_create_tblProblemComment.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08_create_tblProblemTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>08_create_tblProblemTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09_create_tblLanguage.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>09_create_tblLanguage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10_create_tblSolve.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10_create_tblSolve.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11_create_tblSolveComment.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>11_create_tblSolveComment.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12_create_tblTest.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>12_create_tblTest.sql</FullPath>
+        </FileNode>
+        <FileNode Name="13_create_tblProblemVote.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>13_create_tblProblemVote.sql</FullPath>
+        </FileNode>
+        <FileNode Name="14_create_tblLessonVote.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>14_create_tblLessonVote.sql</FullPath>
+        </FileNode>
+        <FileNode Name="15_create_tblSolveVote.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>15_create_tblSolveVote.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

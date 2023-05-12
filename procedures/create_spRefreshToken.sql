@@ -8,11 +8,10 @@ CREATE OR ALTER PROCEDURE dbo.spRefreshToken
    @RefreshTokenExpireDate DATETIME2(2)
 AS
 BEGIN
-   SET NOCOUNT ON
-
    UPDATE [User] 
    SET RefreshToken = @RefreshToken, 
-       RefreshTokenExpireDate = @RefreshTokenExpireDate
+       RefreshTokenExpireDate = @RefreshTokenExpireDate,
+	   UpdateDate = SYSUTCDATETIME()
    WHERE UserId = @UserId;
 END
 GO

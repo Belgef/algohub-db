@@ -21,6 +21,8 @@ CREATE TABLE dbo.tblUser
    FullName NVARCHAR(200),
    Email VARCHAR(256) NOT NULL
       CONSTRAINT UNQ_User_Email UNIQUE,
+   RoleId INT
+      CONSTRAINT FK_User_RoleId FOREIGN KEY REFERENCES tblRole(RoleId) ON DELETE CASCADE,
    PasswordHash CHAR(44) NOT NULL,
    PasswordSalt CHAR(44) NOT NULL,
    RefreshToken CHAR(44),
