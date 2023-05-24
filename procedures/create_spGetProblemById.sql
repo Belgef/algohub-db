@@ -10,7 +10,7 @@ BEGIN
 
    SELECT ProblemId, 
       ProblemName, 
-	  ProblemContentFileName, 
+	  ProblemContent, 
 	  ImageName, 
 	  [Views], 
 	  Solves, 

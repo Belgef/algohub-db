@@ -1,0 +1,18 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE OR ALTER PROCEDURE dbo.spAddTest
+   @ProblemId INT,
+   @Input NVARCHAR(1000),
+   @Output NVARCHAR(1000)
+AS
+BEGIN
+   SET NOCOUNT ON
+
+   INSERT INTO Test(ProblemId, Input, Output)
+   VALUES (@ProblemId, @Input, @Output);
+
+   SELECT SCOPE_IDENTITY();
+END
+GO
