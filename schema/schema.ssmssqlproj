@@ -109,6 +109,12 @@
           <AssociatedConnUserName />
           <FullPath>15_create_tblSolveVote.sql</FullPath>
         </FileNode>
+        <FileNode Name="16_create_tblLessonComment.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>16_create_tblLessonComment.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">

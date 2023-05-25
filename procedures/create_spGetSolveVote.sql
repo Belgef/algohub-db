@@ -1,0 +1,15 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE OR ALTER PROCEDURE dbo.spGetSolveVote
+   @SolveId INT,
+   @AuthorId UNIQUEIDENTIFIER
+AS
+BEGIN
+   SET NOCOUNT ON
+
+   SELECT IsUpvote FROM SolveVote
+   WHERE SolveId = @SolveId AND AuthorId = @AuthorId;
+END
+GO

@@ -8,6 +8,8 @@ AS
 BEGIN
    SET NOCOUNT ON
 
+   UPDATE Problem SET [Views]=[Views]+1 WHERE ProblemId = @ProblemId
+
    SELECT ProblemId, 
       ProblemName, 
 	  ProblemContent, 
