@@ -15,8 +15,8 @@ CREATE TABLE dbo.tblSolveComment
 (
    SolveCommentId INT NOT NULL IDENTITY(1, 1)
       CONSTRAINT PK_SolveComment PRIMARY KEY CLUSTERED,
-   SolveId INT
-      CONSTRAINT FK_SolveComment_SolveId FOREIGN KEY REFERENCES tblSolve(SolveId) ON DELETE NO ACTION,
+   SolveId INT NOT NULL
+      CONSTRAINT FK_SolveComment_SolveId FOREIGN KEY REFERENCES tblSolve(SolveId) ON DELETE CASCADE,
    ParentCommentId INT
       CONSTRAINT FK_SolveComment_ParentCommentId FOREIGN KEY REFERENCES tblSolveComment(SolveCommentId) ON DELETE NO ACTION,
    AuthorId UNIQUEIDENTIFIER

@@ -55,6 +55,12 @@
           <AssociatedConnUserName />
           <FullPath>create_spAddProblemVote.sql</FullPath>
         </FileNode>
+        <FileNode Name="create_spAddSolve.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spAddSolve.sql</FullPath>
+        </FileNode>
         <FileNode Name="create_spAddSolveComment.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
@@ -139,6 +145,12 @@
           <AssociatedConnUserName />
           <FullPath>create_spGetProblems.sql</FullPath>
         </FileNode>
+        <FileNode Name="create_spGetProblemTests.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>create_spGetProblemTests.sql</FullPath>
+        </FileNode>
         <FileNode Name="create_spGetProblemVote.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
@@ -150,6 +162,12 @@
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>create_spGetSolveCommentsBySolveId.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spGetSolves.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>create_spGetSolves.sql</FullPath>
         </FileNode>
         <FileNode Name="create_spGetSolveVote.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
@@ -168,6 +186,12 @@
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>create_spGetUserRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spGetUserSalt.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>create_spGetUserSalt.sql</FullPath>
         </FileNode>
         <FileNode Name="create_spLoginUser.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>

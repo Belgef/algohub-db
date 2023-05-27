@@ -15,8 +15,8 @@ CREATE TABLE dbo.tblLessonComment
 (
    LessonCommentId INT NOT NULL IDENTITY(1, 1)
       CONSTRAINT PK_LessonComment PRIMARY KEY CLUSTERED,
-   LessonId INT
-      CONSTRAINT FK_LessonComment_LessonId FOREIGN KEY REFERENCES tblLesson(LessonId) ON DELETE NO ACTION,
+   LessonId INT NOT NULL
+      CONSTRAINT FK_LessonComment_LessonId FOREIGN KEY REFERENCES tblLesson(LessonId) ON DELETE CASCADE,
    ParentCommentId INT
       CONSTRAINT FK_LessonComment_ParentCommentId FOREIGN KEY REFERENCES tblLessonComment(LessonCommentId) ON DELETE NO ACTION,
    AuthorId UNIQUEIDENTIFIER

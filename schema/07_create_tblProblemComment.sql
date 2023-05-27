@@ -15,8 +15,8 @@ CREATE TABLE dbo.tblProblemComment
 (
    ProblemCommentId INT NOT NULL IDENTITY(1, 1)
       CONSTRAINT PK_ProblemComment PRIMARY KEY CLUSTERED,
-   ProblemId INT
-      CONSTRAINT FK_ProblemComment_ProblemId FOREIGN KEY REFERENCES tblProblem(ProblemId) ON DELETE NO ACTION,
+   ProblemId INT NOT NULL
+      CONSTRAINT FK_ProblemComment_ProblemId FOREIGN KEY REFERENCES tblProblem(ProblemId) ON DELETE CASCADE,
    ParentCommentId INT
       CONSTRAINT FK_ProblemComment_ParentCommentId FOREIGN KEY REFERENCES tblProblemComment(ProblemCommentId) ON DELETE NO ACTION,
    AuthorId UNIQUEIDENTIFIER
