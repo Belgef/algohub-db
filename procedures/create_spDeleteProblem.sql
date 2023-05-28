@@ -1,0 +1,11 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE OR ALTER PROCEDURE dbo.spDeleteProblem
+   @ProblemId INT
+AS
+BEGIN
+   UPDATE Problem SET Deleted = 1 WHERE ProblemId = @ProblemId
+END
+GO

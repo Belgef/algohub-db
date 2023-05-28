@@ -31,6 +31,12 @@
           <AssociatedConnUserName />
           <FullPath>create_spAddLessonComment.sql</FullPath>
         </FileNode>
+        <FileNode Name="create_spAddLessonTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spAddLessonTag.sql</FullPath>
+        </FileNode>
         <FileNode Name="create_spAddLessonVote.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
@@ -48,6 +54,12 @@
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>create_spAddProblemComment.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spAddProblemTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spAddProblemTag.sql</FullPath>
         </FileNode>
         <FileNode Name="create_spAddProblemVote.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
@@ -103,6 +115,18 @@
           <AssociatedConnUserName />
           <FullPath>create_spCheckUserName.sql</FullPath>
         </FileNode>
+        <FileNode Name="create_spDeleteLesson.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spDeleteLesson.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spDeleteProblem.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spDeleteProblem.sql</FullPath>
+        </FileNode>
         <FileNode Name="create_spGetLessonById.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
@@ -120,6 +144,12 @@
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>create_spGetLessons.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spGetLessonTags.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spGetLessonTags.sql</FullPath>
         </FileNode>
         <FileNode Name="create_spGetLessonVote.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
@@ -144,6 +174,12 @@
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>create_spGetProblems.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spGetProblemTags.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spGetProblemTags.sql</FullPath>
         </FileNode>
         <FileNode Name="create_spGetProblemTests.sql">
           <AssociatedConnectionMoniker />
@@ -175,6 +211,12 @@
           <AssociatedConnUserName />
           <FullPath>create_spGetSolveVote.sql</FullPath>
         </FileNode>
+        <FileNode Name="create_spGetTags.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spGetTags.sql</FullPath>
+        </FileNode>
         <FileNode Name="create_spGetUserById.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
@@ -204,6 +246,18 @@
           <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>create_spRefreshToken.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spRetrieveLesson.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spRetrieveLesson.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_spRetrieveProblem.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_spRetrieveProblem.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

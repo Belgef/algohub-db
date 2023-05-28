@@ -1,0 +1,11 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE OR ALTER PROCEDURE dbo.spDeleteLesson
+   @LessonId INT
+AS
+BEGIN
+   UPDATE Lesson SET Deleted = 1 WHERE LessonId = @LessonId
+END
+GO

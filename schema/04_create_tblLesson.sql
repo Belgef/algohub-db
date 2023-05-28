@@ -26,6 +26,8 @@ CREATE TABLE dbo.tblLesson
       CONSTRAINT DFT_Lesson_Upvotes DEFAULT 0,
    Downvotes INT NOT NULL
       CONSTRAINT DFT_Lesson_Downvotes DEFAULT 0,
+   Deleted BIT NOT NULL
+      CONSTRAINT dft_Problem_Deleted DEFAULT 0,
    CreateDate DATETIME2(2) NOT NULL
       CONSTRAINT DFT_Lesson_CreateDate DEFAULT SYSUTCDATETIME(),
    UpdateDate DATETIME2(2) NOT NULL

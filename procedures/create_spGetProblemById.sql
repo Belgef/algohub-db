@@ -21,6 +21,7 @@ BEGIN
 	  TimeLimitMs, 
 	  MemoryLimitBytes, 
 	  p.CreateDate,
+	  Deleted,
 	  u.UserName, 
 	  u.FullName, 
       u.IconName

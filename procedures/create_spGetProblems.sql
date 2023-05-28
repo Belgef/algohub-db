@@ -4,7 +4,8 @@ GO
 
 CREATE OR ALTER PROCEDURE dbo.spGetProblems
    @OrderColumn VARCHAR(32) = 'ProblemId',
-   @OrderDirection VARCHAR(4) = 'ASC'
+   @OrderDirection VARCHAR(4) = 'ASC',
+   @Deleted BIT = 0
 AS
 BEGIN
    SET NOCOUNT ON
@@ -43,7 +44,8 @@ BEGIN
          u.IconName
 	   FROM Problem p
 	   LEFT JOIN [User] u
-	   ON AuthorId = UserId;
+	   ON AuthorId = UserId
+	   WHERE Deleted = @Deleted;
       
 	  IF @OrderColumn LIKE 'ProblemId'
 	  BEGIN 

@@ -30,6 +30,8 @@ CREATE TABLE dbo.tblProblem
       CONSTRAINT DFT_Problem_Downvotes DEFAULT 0,
    TimeLimitMs INT NOT NULL,
    MemoryLimitBytes INT NOT NULL,
+   Deleted BIT NOT NULL
+      CONSTRAINT dft_Problem_Deleted DEFAULT 0,
    CreateDate DATETIME2(2) NOT NULL
       CONSTRAINT DFT_Problem_CreateDate DEFAULT SYSUTCDATETIME(),
    UpdateDate DATETIME2(2) NOT NULL

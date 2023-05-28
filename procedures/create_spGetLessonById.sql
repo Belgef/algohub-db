@@ -17,6 +17,7 @@ BEGIN
 	  [Views], 
 	  Upvotes, 
 	  Downvotes, 
+	  Deleted,
 	  l.CreateDate,
 	  u.UserName, 
 	  u.FullName, 

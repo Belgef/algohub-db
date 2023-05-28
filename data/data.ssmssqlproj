@@ -43,6 +43,12 @@
           <AssociatedConnUserName />
           <FullPath>04_insert_Language.sql</FullPath>
         </FileNode>
+        <FileNode Name="05_insert_Tag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LENOVOIDEAPAD:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LENOVOIDEAPAD</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05_insert_Tag.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">

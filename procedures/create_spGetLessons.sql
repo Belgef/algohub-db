@@ -4,7 +4,8 @@ GO
 
 CREATE OR ALTER PROCEDURE dbo.spGetLessons
    @OrderColumn VARCHAR(32) = 'LessonId',
-   @OrderDirection VARCHAR(4) = 'ASC'
+   @OrderDirection VARCHAR(4) = 'ASC',
+   @Deleted BIT = 0
 AS
 BEGIN
    SET NOCOUNT ON
@@ -37,7 +38,8 @@ BEGIN
          u.IconName
 	   FROM Lesson l
 	   LEFT JOIN [User] u
-	   ON AuthorId = UserId;
+	   ON AuthorId = UserId
+	   WHERE Deleted = @Deleted;
       
 	  IF @OrderColumn LIKE 'LessonId'
 	  BEGIN 
